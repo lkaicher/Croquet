@@ -432,10 +432,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerup: {fileID: 3811722755848808174, guid: 4e179930d3044f548ad8dfe9a181b92d, type: 3}
   spawnRate: 2
-  minX: -960
-  minY: -540
-  maxX: 960
-  maxY: 540
+  minX: -650
+  minY: -450
+  maxX: 650
+  maxY: 450
 --- !u!1001 &535729791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1333,6 +1333,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4128235341761861014, guid: 4e179930d3044f548ad8dfe9a181b92d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215781774546453651, guid: 4e179930d3044f548ad8dfe9a181b92d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215781774546453651, guid: 4e179930d3044f548ad8dfe9a181b92d, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4215781774546453651, guid: 4e179930d3044f548ad8dfe9a181b92d, type: 3}
