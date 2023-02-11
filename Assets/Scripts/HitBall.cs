@@ -5,13 +5,14 @@ using UnityEngine.InputSystem;
 
 public class HitBall : MonoBehaviour
 {
-    [SerializeField] float xVel;
-    [SerializeField] float yVel;
-    [SerializeField] float power;
-    Vector2 mousePos;
-    [SerializeField] Vector2 worldPos;
+    float power;
+    Vector2 mousePos; //mousePos on screen
+    Vector2 worldPos;
+    Vector2 mousePosFromBall; //mousePos relative to ball
     [SerializeField] float capDistance;
-    [SerializeField] bool launchBall;
+    bool launchBall;
+    bool ballMoving;
+    [SerializeField] float tolerance; //The tolerance value to see whether or not the ball is moving.
 
     Rigidbody2D myRb;
     private void Awake()
@@ -24,18 +25,20 @@ public class HitBall : MonoBehaviour
     {
         mousePos = Mouse.current.position.ReadValue();
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePosFromBall = (Vector2) transform.position - worldPos;
         GetPower();
     }
 
     private void FixedUpdate()
     {
+        checkBallMoving();
         Launch();
     }
 
     float GetPower()
     {
-        if (Distance(worldPos) > capDistance) power = capDistance;
-        else power = Distance(worldPos);
+        if (Distance(mousePosFromBall) > capDistance) power = capDistance;
+        else power = Distance(mousePosFromBall);
         return power;
     }
 
@@ -51,12 +54,19 @@ public class HitBall : MonoBehaviour
 
     void Launch()
     {
+        if (ballMoving) return; //We only want the player to launch the ball when it is finished moving.
         if (launchBall)
         {
-            Vector3 launchDir = Vector3.Normalize((Vector3)worldPos - transform.position);
-            Vector2 forceVector = -GetPower() * launchDir;
+            Vector3 launchDir = Vector3.Normalize((Vector3)mousePosFromBall);
+            Vector2 forceVector = GetPower() * launchDir;
             myRb.AddForce(forceVector, ForceMode2D.Impulse);
         }
         launchBall = false;
+    }
+
+    void checkBallMoving()
+    {
+        if (Mathf.Abs(myRb.velocity.x) < tolerance && Mathf.Abs(myRb.velocity.y) < tolerance) ballMoving = false;
+        else ballMoving = true;
     }
 }
