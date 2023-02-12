@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class HitBall : MonoBehaviour
 {
+    
     float power;
     Vector2 mousePos; //mousePos on screen
     Vector2 worldPos;
@@ -20,13 +21,21 @@ public class HitBall : MonoBehaviour
         myRb = GetComponent<Rigidbody2D>();
     }
 
+    
+    float GetForceMagnitude(){
+        return Mathf.Pow((Mathf.Pow(Mathf.Abs(myRb.velocity.x),2) +  Mathf.Pow(Mathf.Abs(myRb.velocity.x),2)),0.5f) ; 
+    }
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(Mouse.current.position.ReadValue());
         mousePos = Mouse.current.position.ReadValue();
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         mousePosFromBall = (Vector2) transform.position - worldPos;
         GetPower();
+        
+        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f * Time.deltaTime));
+
     }
 
     private void FixedUpdate()
@@ -58,7 +67,7 @@ public class HitBall : MonoBehaviour
         if (launchBall)
         {
             Vector3 launchDir = Vector3.Normalize((Vector3)mousePosFromBall);
-            Vector2 forceVector = GetPower() * launchDir;
+            Vector2 forceVector = GetPower() * launchDir * 10;
             myRb.AddForce(forceVector, ForceMode2D.Impulse);
         }
         launchBall = false;
