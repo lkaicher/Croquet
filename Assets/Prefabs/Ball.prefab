@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a425057aec145798b70bb9906afdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 5
   rb: {fileID: 7119985541177349539}
   ballSprite: {fileID: 6039915321554893111}
   stillSprite: {fileID: 21300000, guid: 30019759d9b678a44be95c4b4740aa3b, type: 3}

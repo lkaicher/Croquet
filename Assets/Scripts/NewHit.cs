@@ -25,6 +25,8 @@ public class NewHit : MonoBehaviour
     private GoalTurnManager goalManager;
     [SerializeField]
     private int player;
+    [SerializeField]
+    private int rollDirection;
 
 
 
@@ -33,7 +35,7 @@ public class NewHit : MonoBehaviour
         SR = ballSprite.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         trajectory = gameObject.AddComponent<LineRenderer>();
-        trajectory.widthMultiplier = 0.9f; // Thickness of the line
+        trajectory.widthMultiplier = 3f; // Thickness of the line
         trajectory.material = new Material(Shader.Find("Sprites/Default"));
         trajectory.startColor = Color.red;
         trajectory.endColor = Color.red;
@@ -44,7 +46,7 @@ public class NewHit : MonoBehaviour
     {
         if (goalManager.currentPlayer != player){
             if(rb.velocity.magnitude >= 30){
-                ballSprite.transform.Rotate(new Vector3(0, 0, -1 * rb.velocity.magnitude * Time.deltaTime ));
+                ballSprite.transform.Rotate(new Vector3(0, 0, rollDirection * rb.velocity.magnitude * Time.deltaTime ));
             }
             return;
         }
@@ -78,7 +80,7 @@ public class NewHit : MonoBehaviour
             SR.sprite= stillSprite;
             goalManager.endTurn();
         } else {
-            ballSprite.transform.Rotate(new Vector3(0, 0, (-1*player%2) * rb.velocity.magnitude * Time.deltaTime ));
+            ballSprite.transform.Rotate(new Vector3(0, 0, rollDirection* rb.velocity.magnitude * Time.deltaTime ));
            
         }
     }

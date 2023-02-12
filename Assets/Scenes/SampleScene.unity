@@ -1211,6 +1211,10 @@ PrefabInstance:
       propertyPath: movingSprite
       value: 
       objectReference: {fileID: 21300000, guid: a9d1dcfca5e16c841b9f3d7f5e163c8c, type: 3}
+    - target: {fileID: 5301314158312947417, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: rollDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7119985541177349536, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_Name
       value: BallQueen
@@ -1959,6 +1963,10 @@ PrefabInstance:
       propertyPath: movingSprite
       value: 
       objectReference: {fileID: 21300000, guid: 17e9eb3257167094db0055090d940b34, type: 3}
+    - target: {fileID: 5301314158312947417, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: rollDirection
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7119985541177349536, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_Name
       value: BallAlice
