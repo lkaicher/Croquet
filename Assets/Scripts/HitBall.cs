@@ -15,7 +15,7 @@ public class HitBall : MonoBehaviour
     Vector2 mousePosFromBall; //mousePos relative to ball
     [SerializeField] float capDistance;
     bool launchBall;
-    bool ballMoving = false;
+    private bool ballMoving = false;
     [SerializeField] float tolerance; //The tolerance value to see whether or not the ball is moving.
 
     Rigidbody2D myRb;
@@ -48,7 +48,7 @@ public class HitBall : MonoBehaviour
         mousePosFromBall = (Vector2) transform.position - worldPos;
         GetPower();
         
-        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f));
+        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f * Time.deltaTime));
         checkBallMoving();
         if (ballMoving) {
             SR.sprite= movingSprite;

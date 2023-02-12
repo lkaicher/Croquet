@@ -11,6 +11,12 @@ public class GoalTurnManager : MonoBehaviour
     public TextMeshProUGUI scoreTextP1;
     [SerializeField]
     public TextMeshProUGUI scoreTextP2;
+
+    [SerializeField]
+    private GameObject portraitP1;
+
+    [SerializeField]
+    private GameObject portraitP2;
     
 
     [SerializeField]
@@ -42,6 +48,17 @@ public class GoalTurnManager : MonoBehaviour
         } else 
             return; 
 
+        if (score1 == score2){
+            portraitP1.setSprite(1);
+            portraitP2.setSprite(1);
+        } else if (score1 > score2){
+            portraitP1.setSprite(0);
+            portraitP2.setSprite(2); 
+        } else {
+            portraitP1.setSprite(2);
+            portraitP2.setSprite(0); 
+        }
+
     }
     public void beginTurn(){
         turnInProgress = true; 
@@ -49,6 +66,13 @@ public class GoalTurnManager : MonoBehaviour
    public void endTurn(){
         turnInProgress = false;
         currentPlayer = (currentPlayer % 2) + 1;
+        if (currentPlayer == 1){
+            portraitP2.dim();
+            portraitP1.undim();
+        } else {
+            portraitP1.dim();
+            portraitP2.undim();
+        }
    }
     
 }
