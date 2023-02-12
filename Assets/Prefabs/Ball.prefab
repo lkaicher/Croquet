@@ -162,9 +162,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 17e9eb3257167094db0055090d940b34, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.98929787, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -274,3 +274,5 @@ MonoBehaviour:
   ballSprite: {fileID: 6039915321554893111}
   stillSprite: {fileID: 21300000, guid: 30019759d9b678a44be95c4b4740aa3b, type: 3}
   movingSprite: {fileID: 21300000, guid: 17e9eb3257167094db0055090d940b34, type: 3}
+  goalManager: {fileID: 0}
+  player: 0
