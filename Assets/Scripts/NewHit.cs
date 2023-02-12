@@ -78,7 +78,7 @@ public class NewHit : MonoBehaviour
             SR.sprite= stillSprite;
             goalManager.endTurn();
         } else {
-            ballSprite.transform.Rotate(new Vector3(0, 0, -1 * rb.velocity.magnitude * Time.deltaTime ));
+            ballSprite.transform.Rotate(new Vector3(0, 0, (-1*player%2) * rb.velocity.magnitude * Time.deltaTime ));
            
         }
     }
