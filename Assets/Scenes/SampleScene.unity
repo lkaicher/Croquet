@@ -1114,10 +1114,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7396752481824958087, guid: f2123a2ee47004d419a33f069de148a5, type: 3}
   m_PrefabInstance: {fileID: 1435298653}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
---- !u!1001 &1507627641
-PrefabInstance:
-=======
 --- !u!1 &1436085413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1231,6 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!224 &1436085416
 RectTransform:
->>>>>>> origin/dragshoot
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
