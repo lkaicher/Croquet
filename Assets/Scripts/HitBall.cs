@@ -23,7 +23,10 @@ public class HitBall : MonoBehaviour
 
     
     float GetForceMagnitude(){
-        return Mathf.Pow((Mathf.Pow(Mathf.Abs(myRb.velocity.x),2) +  Mathf.Pow(Mathf.Abs(myRb.velocity.x),2)),0.5f) ; 
+        float magnitude = Mathf.Sqrt((Mathf.Pow(myRb.velocity.x,2) +  Mathf.Pow(myRb.velocity.x,2))) ;
+        Debug.Log(magnitude);
+        return magnitude;
+         
     }
     // Update is called once per frame
     void Update()
