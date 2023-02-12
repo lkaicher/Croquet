@@ -48,7 +48,7 @@ public class HitBall : MonoBehaviour
         mousePosFromBall = (Vector2) transform.position - worldPos;
         GetPower();
         
-        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f * Time.deltaTime));
+        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f));
         checkBallMoving();
         if (ballMoving) {
             SR.sprite= movingSprite;

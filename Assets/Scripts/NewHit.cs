@@ -12,8 +12,21 @@ public class NewHit : MonoBehaviour
     private Vector2 direction;
     private float distance;
 
+    SpriteRenderer SR;
+
+    [SerializeField]
+    private GameObject ballSprite;
+
+    [SerializeField]
+    private Sprite stillSprite;
+    [SerializeField]
+    private Sprite movingSprite;
+
+
+
     private void Start()
     {
+        SR = ballSprite.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         trajectory = gameObject.AddComponent<LineRenderer>();
         trajectory.widthMultiplier = 0.9f; // Thickness of the line
@@ -45,6 +58,13 @@ public class NewHit : MonoBehaviour
         {
             rb.AddForce(direction * force, ForceMode2D.Impulse);
             trajectory.enabled = false;
+             SR.sprite= movingSprite;
+        }
+        if (rb.velocity.magnitude <= 30) {
+            rb.velocity = new Vector3(0,0,0);
+            SR.sprite= stillSprite;
+        } else {
+            ballSprite.transform.Rotate(new Vector3(0, 0, -1 * rb.velocity.magnitude * Time.deltaTime ));
         }
     }
 
