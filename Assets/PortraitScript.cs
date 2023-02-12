@@ -5,8 +5,8 @@ using UnityEngine;
 public class PortraitScript : MonoBehaviour
 {
 
-    [SerializeField]
-    GoalTurnManager goalManager;
+   // [SerializeField]
+    //GoalTurnManager goalManager;
 
     [SerializeField]
     private Sprite[] portraitSprites;

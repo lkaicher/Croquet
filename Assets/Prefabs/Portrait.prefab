@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb34c5c95be9eb84f86ef4219e63e25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalManager: {fileID: 0}
   portraitSprites: []
+  Shade: {fileID: 5385720635127905939}
 --- !u!212 &6866548940786313422
 SpriteRenderer:
   m_ObjectHideFlags: 0

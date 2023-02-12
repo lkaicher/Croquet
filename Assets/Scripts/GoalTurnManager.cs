@@ -13,10 +13,10 @@ public class GoalTurnManager : MonoBehaviour
     public TextMeshProUGUI scoreTextP2;
 
     [SerializeField]
-    private GameObject portraitP1;
+    private PortraitScript portraitP1;
 
     [SerializeField]
-    private GameObject portraitP2;
+    private PortraitScript portraitP2;
     
 
     [SerializeField]
@@ -67,11 +67,11 @@ public class GoalTurnManager : MonoBehaviour
         turnInProgress = false;
         currentPlayer = (currentPlayer % 2) + 1;
         if (currentPlayer == 1){
-            portraitP2.dim();
-            portraitP1.undim();
+            portraitP2.dimSprite();
+            portraitP1.unDimSprite();
         } else {
-            portraitP1.dim();
-            portraitP2.undim();
+            portraitP1.dimSprite();
+            portraitP2.unDimSprite();
         }
    }
     
