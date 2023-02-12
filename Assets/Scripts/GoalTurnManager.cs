@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GoalTurnManager : MonoBehaviour
@@ -18,6 +19,9 @@ public class GoalTurnManager : MonoBehaviour
     [SerializeField]
     private PortraitScript portraitP2;
     
+
+    [SerializeField]
+    private TextMeshPro winText;
 
     [SerializeField]
     private GameObject goal;
@@ -39,7 +43,14 @@ public class GoalTurnManager : MonoBehaviour
     }
 
     public void GameWon(int i){
-        Debug.Log("Player " + i + " won!");
+        Debug.Log(name + " won!");
+        if (i == 1){
+            SceneManager.LoadScene(3);
+        }else{
+            SceneManager.LoadScene(4);
+        }
+
+        
         
     }
     public void incrementScore(string Playertag){

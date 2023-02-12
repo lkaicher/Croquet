@@ -29,7 +29,7 @@ public class FlamingoScript : MonoBehaviour
             
         } else if (playerTag == "Player2"){
             if (GoalManager.score1 == 6){
-                GoalManager.GameWon(1);
+                GoalManager.GameWon(2);
             }
         } else {
             return;
