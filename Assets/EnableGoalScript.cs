@@ -6,10 +6,17 @@ public class EnableGoalScript : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject goalTop;
+    public GameObject goalTop;
+
+
+  
+
 
     [SerializeField]
     bool enable = true;
+
+
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +27,17 @@ public class EnableGoalScript : MonoBehaviour
     void Update()
     {
         
+
     }
 
     private void OnTriggerEnter2D(Collider2D col){
-        
-        goalTop.SetActive(enable);
-        Debug.Log("Goal enabled: "+enable);
+        if(col.gameObject.tag == "Player" || col.gameObject.tag == "Player2"){
+            //if (!goalScript.getRecentlyEnabled()){
+                goalTop.SetActive(enable);
+               // goalScript.setRecentlyEnabled(true);
+                Debug.Log("Goal enabled: "+enable);
+            //}
+        }
 
     }
 }
