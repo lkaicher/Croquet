@@ -40,6 +40,7 @@ public class GoalTurnManager : MonoBehaviour
 
     public void GameWon(int i){
         Debug.Log("Player " + i + " won!");
+        
     }
     public void incrementScore(string Playertag){
 
