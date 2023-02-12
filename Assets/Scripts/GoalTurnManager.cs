@@ -21,8 +21,8 @@ public class GoalTurnManager : MonoBehaviour
 
     [SerializeField]
     private GameObject goal;
-    private int score1=0;
-    private int score2=0;
+    public int score1=0;
+    public int score2=0;
     public int currentPlayer=1;
 
     public bool turnInProgress;
@@ -38,6 +38,9 @@ public class GoalTurnManager : MonoBehaviour
 
     }
 
+    public void GameWon(int i){
+        Debug.Log("Player " + i + " won!");
+    }
     public void incrementScore(string Playertag){
 
         if (Playertag == "Player"){
