@@ -29,7 +29,9 @@ public class HitBall : MonoBehaviour
 
     }
 
-    
+    Vector3 getLaunchDir(){
+        return Vector3.Normalize((Vector3)mousePosFromBall);
+    }
     float GetForceMagnitude(){
         float magnitude = Mathf.Sqrt((Mathf.Pow(myRb.velocity.x,2) +  Mathf.Pow(myRb.velocity.x,2))) ;
         //Debug.Log(magnitude);
@@ -53,6 +55,8 @@ public class HitBall : MonoBehaviour
         } else{
             SR.sprite = stillSprite;
         }
+
+        Debug.DrawLine(mousePos, mousePosFromBall);
 
     }
 
@@ -85,7 +89,7 @@ public class HitBall : MonoBehaviour
         if (launchBall)
         {
             
-            Vector3 launchDir = Vector3.Normalize((Vector3)mousePosFromBall);
+            Vector3 launchDir = getLaunchDir();
             Vector2 forceVector = GetPower() * launchDir * 10;
             SR.sprite= movingSprite;
             myRb.AddForce(forceVector, ForceMode2D.Impulse);
