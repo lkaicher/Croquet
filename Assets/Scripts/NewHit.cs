@@ -43,6 +43,9 @@ public class NewHit : MonoBehaviour
     private void Update()
     {
         if (goalManager.currentPlayer != player){
+            if(rb.velocity.magnitude >= 30){
+                ballSprite.transform.Rotate(new Vector3(0, 0, -1 * rb.velocity.magnitude * Time.deltaTime ));
+            }
             return;
         }
         if (!goalManager.turnInProgress){
