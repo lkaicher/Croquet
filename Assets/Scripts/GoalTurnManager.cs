@@ -31,6 +31,8 @@ public class GoalTurnManager : MonoBehaviour
 
     public bool turnInProgress;
 
+    
+
     void Start(){
 
 
@@ -39,6 +41,7 @@ public class GoalTurnManager : MonoBehaviour
 
         portraitP2.dimSprite();
             portraitP1.unDimSprite();
+
 
     }
 
