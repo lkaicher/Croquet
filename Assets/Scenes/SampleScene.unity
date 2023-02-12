@@ -1011,6 +1011,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7396752481824958087, guid: f2123a2ee47004d419a33f069de148a5, type: 3}
   m_PrefabInstance: {fileID: 1435298653}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1507627641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7119985541177349536, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Name
+      value: BallQueen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349537, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9d1dcfca5e16c841b9f3d7f5e163c8c, type: 3}
+    - target: {fileID: 7119985541177349537, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349540, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Radius
+      value: 74.58113
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349540, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Offset.x
+      value: -3.163437
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349540, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.21665192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349542, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: stillSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9c5ade11ff8fbf4ea593bf877783b19, type: 3}
+    - target: {fileID: 7119985541177349542, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: movingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9d1dcfca5e16c841b9f3d7f5e163c8c, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
 --- !u!1 &1584974089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,8 +1261,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7119985541177349536, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_Name
-      value: Ball
+      value: BallAlice
       objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349537, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30019759d9b678a44be95c4b4740aa3b, type: 3}
     - target: {fileID: 7119985541177349537, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -1192,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -326
       objectReference: {fileID: 0}
     - target: {fileID: 7119985541177349538, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1238,6 +1331,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.21665192
       objectReference: {fileID: 0}
+    - target: {fileID: 7119985541177349542, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: stillSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30019759d9b678a44be95c4b4740aa3b, type: 3}
+    - target: {fileID: 7119985541177349542, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: movingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 17e9eb3257167094db0055090d940b34, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
 --- !u!1001 &1961670484
