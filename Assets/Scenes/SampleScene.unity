@@ -979,6 +979,8 @@ MonoBehaviour:
   scoreTextP1: {fileID: 954580346}
   scoreTextP2: {fileID: 567242301}
   goal: {fileID: 0}
+  currentPlayer: 1
+  turnInProgress: 0
 --- !u!224 &1244560675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1412,6 +1414,14 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1787213230}
+    - target: {fileID: 5301314158312947417, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301314158312947417, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
+      propertyPath: goalManager
+      value: 
+      objectReference: {fileID: 1244560674}
     - target: {fileID: 5301314158312947417, guid: a2aaeb5023002e649b24b9c4447408d2, type: 3}
       propertyPath: stillSprite
       value: 

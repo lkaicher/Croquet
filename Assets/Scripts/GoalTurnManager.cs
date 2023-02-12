@@ -17,7 +17,9 @@ public class GoalTurnManager : MonoBehaviour
     private GameObject goal;
     private int score1=0;
     private int score2=0;
-    private int currentPlayer=1;
+    public int currentPlayer=1;
+
+    public bool turnInProgress;
 
     void Start(){
 
@@ -41,6 +43,12 @@ public class GoalTurnManager : MonoBehaviour
             return; 
 
     }
-   
+    public void beginTurn(){
+        turnInProgress = true; 
+    }
+   public void endTurn(){
+        turnInProgress = false;
+        currentPlayer = (currentPlayer % 2) + 1;
+   }
     
 }

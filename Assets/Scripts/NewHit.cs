@@ -21,6 +21,10 @@ public class NewHit : MonoBehaviour
     private Sprite stillSprite;
     [SerializeField]
     private Sprite movingSprite;
+    [SerializeField]
+    private GoalTurnManager goalManager;
+    [SerializeField]
+    private int player;
 
 
 
@@ -38,6 +42,10 @@ public class NewHit : MonoBehaviour
 
     private void Update()
     {
+        if (goalManager.currentPlayer != player){
+            return;
+        }
+        if (!goalManager.turnInProgress){
         if (Input.GetMouseButtonDown(0))
         {
             startPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -59,12 +67,16 @@ public class NewHit : MonoBehaviour
             rb.AddForce(direction * force, ForceMode2D.Impulse);
             trajectory.enabled = false;
              SR.sprite= movingSprite;
+             goalManager.beginTurn();
         }
-        if (rb.velocity.magnitude <= 30) {
+        }
+        if (goalManager.turnInProgress && rb.velocity.magnitude <= 30) {
             rb.velocity = new Vector3(0,0,0);
             SR.sprite= stillSprite;
+            goalManager.endTurn();
         } else {
             ballSprite.transform.Rotate(new Vector3(0, 0, -1 * rb.velocity.magnitude * Time.deltaTime ));
+           
         }
     }
 
