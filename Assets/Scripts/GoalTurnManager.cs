@@ -33,6 +33,9 @@ public class GoalTurnManager : MonoBehaviour
       scoreTextP1.text =  score1.ToString() ;
         scoreTextP2.text = score2.ToString() ;
 
+        portraitP2.dimSprite();
+            portraitP1.unDimSprite();
+
     }
 
     public void incrementScore(string Playertag){

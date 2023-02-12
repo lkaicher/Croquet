@@ -15,7 +15,7 @@ public class PortraitScript : MonoBehaviour
     [SerializeField]
     SpriteRenderer Shade;
 
-    Color dim = new Color(0,0,0,100);
+    Color dim = new Color(0,0,0,0.35f);
     Color unDim = new Color(0,0,0,0);
 
     public void setSprite(int index){
@@ -36,6 +36,7 @@ public class PortraitScript : MonoBehaviour
     void Start()
     {
         SR = this.GetComponent<SpriteRenderer>();
+        //unDimSprite();
 
     }
 
