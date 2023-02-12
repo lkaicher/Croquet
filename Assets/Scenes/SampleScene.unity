@@ -1319,6 +1319,26 @@ PrefabInstance:
       propertyPath: portraitSprites.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4824577019143163286, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: portraitSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9fc5933af9b8af0458db13be9400b825, type: 3}
+    - target: {fileID: 4824577019143163286, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: portraitSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58b00ea7a5743f24e9c53e14c419ff13, type: 3}
+    - target: {fileID: 4824577019143163286, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: portraitSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: d5d8faf805f86a1449c3dce8d140387d, type: 3}
+    - target: {fileID: 5385720635127905939, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58b00ea7a5743f24e9c53e14c419ff13, type: 3}
+    - target: {fileID: 5385720635127905939, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 6425977023188501896, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
       propertyPath: m_Name
       value: PortraitQueen
@@ -1366,6 +1386,14 @@ PrefabInstance:
     - target: {fileID: 6425977023188501897, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866548940786313422, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58b00ea7a5743f24e9c53e14c419ff13, type: 3}
+    - target: {fileID: 6866548940786313422, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
@@ -1927,6 +1955,10 @@ PrefabInstance:
       propertyPath: portraitSprites.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: e659253227706784c996b1a913c9ba05, type: 3}
+    - target: {fileID: 5385720635127905939, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 6425977023188501896, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
       propertyPath: m_Name
       value: PortraitAlice
@@ -1974,6 +2006,10 @@ PrefabInstance:
     - target: {fileID: 6425977023188501897, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866548940786313422, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cbde155d938d454f95df617509bbb57, type: 3}
