@@ -8,6 +8,9 @@ public class goalTopScript : MonoBehaviour
     [SerializeField]
     private GoalTurnManager GoalManager;
 
+
+    [SerializeField]
+    public int goalID;
     bool P1TRIGGERED = false;
     bool P2TRIGGERED = false;
 
