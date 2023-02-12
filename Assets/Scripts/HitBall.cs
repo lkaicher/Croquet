@@ -5,28 +5,55 @@ using UnityEngine.InputSystem;
 
 public class HitBall : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite stillSprite;
+    [SerializeField]
+    private Sprite movingSprite;
     float power;
     Vector2 mousePos; //mousePos on screen
     Vector2 worldPos;
     Vector2 mousePosFromBall; //mousePos relative to ball
     [SerializeField] float capDistance;
     bool launchBall;
-    bool ballMoving;
+    bool ballMoving = false;
     [SerializeField] float tolerance; //The tolerance value to see whether or not the ball is moving.
 
     Rigidbody2D myRb;
+
+    SpriteRenderer SR;
+
     private void Awake()
     {
         myRb = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
+
     }
 
+    
+    float GetForceMagnitude(){
+        float magnitude = Mathf.Sqrt((Mathf.Pow(myRb.velocity.x,2) +  Mathf.Pow(myRb.velocity.x,2))) ;
+        //Debug.Log(magnitude);
+        return magnitude;
+         
+    }
     // Update is called once per frame
     void Update()
     {
+
+        //Debug.Log(Mouse.current.position.ReadValue());
         mousePos = Mouse.current.position.ReadValue();
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         mousePosFromBall = (Vector2) transform.position - worldPos;
         GetPower();
+        
+        transform.Rotate(new Vector3(0, 0, GetForceMagnitude() * -1f * Time.deltaTime));
+        checkBallMoving();
+        if (ballMoving) {
+            SR.sprite= movingSprite;
+        } else{
+            SR.sprite = stillSprite;
+        }
+
     }
 
     private void FixedUpdate()
@@ -57,8 +84,10 @@ public class HitBall : MonoBehaviour
         if (ballMoving) return; //We only want the player to launch the ball when it is finished moving.
         if (launchBall)
         {
+            
             Vector3 launchDir = Vector3.Normalize((Vector3)mousePosFromBall);
-            Vector2 forceVector = GetPower() * launchDir;
+            Vector2 forceVector = GetPower() * launchDir * 10;
+            SR.sprite= movingSprite;
             myRb.AddForce(forceVector, ForceMode2D.Impulse);
         }
         launchBall = false;
