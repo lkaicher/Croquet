@@ -41,7 +41,7 @@ public class goalTopScript : MonoBehaviour
             return;
         }
 
-        GoalManager.incrementScore(col.gameObject.tag );
+        GoalManager.IncrementScore(col.gameObject.tag );
 
     }
    
