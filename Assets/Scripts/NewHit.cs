@@ -72,13 +72,13 @@ public class NewHit : MonoBehaviour
             rb.AddForce(direction * force, ForceMode2D.Impulse);
             trajectory.enabled = false;
              SR.sprite= movingSprite;
-             goalManager.beginTurn();
+             goalManager.BeginTurn();
         }
         }
         if (goalManager.turnInProgress && rb.velocity.magnitude <= 30) {
             rb.velocity = new Vector3(0,0,0);
             SR.sprite= stillSprite;
-            goalManager.endTurn();
+            goalManager.EndTurn();
         } else {
             ballSprite.transform.Rotate(new Vector3(0, 0, rollDirection* rb.velocity.magnitude * Time.deltaTime ));
            
