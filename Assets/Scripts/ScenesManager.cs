@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScenesManager : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class ScenesManager : MonoBehaviour
 
     public void LoadGameOver()
     {
-        if(SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Game Over"))
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Game Over"))
+        {
             SceneManager.LoadScene("Game Over");
+        }
     }
 
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
-
 }
