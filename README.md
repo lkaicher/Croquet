@@ -5,3 +5,5 @@ Our team (consisting of Jonathan Benz, Jeremy Brunelle, Luke Kaicher, and Sasha 
 Checkout the Devpost for more information: https://devpost.com/software/crazy-kooky-croquet
 
 Play this game with a friend! 
+
+Play here: https://lkaicher.github.io/Croquet/
